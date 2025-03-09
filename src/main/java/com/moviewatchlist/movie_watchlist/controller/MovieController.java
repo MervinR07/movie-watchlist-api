@@ -40,37 +40,37 @@ public class MovieController {
         movieService.deleteMovie(id);
     }
 
-    // ✅ Search movies by title
+    
     @GetMapping("/search")
     public List<Movie> searchMovies(@RequestParam String title) {
         return movieService.searchMovies(title);
     }
 
-    // ✅ Filter movies by genre
+    
     @GetMapping("/filter/genre")
     public List<Movie> filterMoviesByGenre(@RequestParam String genre) {
         return movieService.filterMoviesByGenre(genre);
     }
 
-    // ✅ Filter movies by year
+    
     @GetMapping("/filter/year")
     public List<Movie> filterMoviesByYear(@RequestParam Integer year) {
         return movieService.filterMoviesByYear(year);
     }
 
-    // ✅ Filter movies by rating
+   
     @GetMapping("/filter/rating")
     public List<Movie> filterMoviesByRating(@RequestParam Double rating) {
         return movieService.filterMoviesByRating(rating);
     }
 
-    // ✅ Filter movies by year range
+ 
     @GetMapping("/filter/year-range")
     public List<Movie> filterMoviesByYearRange(@RequestParam Integer startYear, @RequestParam Integer endYear) {
         return movieService.filterMoviesByYearRange(startYear, endYear);
     }
 
-    // ✅ Filter movies by rating range
+   
     @GetMapping("/filter/rating-range")
     public List<Movie> filterMoviesByRatingRange(@RequestParam Double minRating, @RequestParam Double maxRating) {
         return movieService.filterMoviesByRatingRange(minRating, maxRating);
